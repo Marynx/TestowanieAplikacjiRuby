@@ -19,12 +19,12 @@ class ResistorColorDuoTest < Minitest::Test
   end
 
   def test_orange_and_orange
-    skip
+    #skip
     assert_equal 33, ResistorColorDuo.value(["orange", "orange"])
   end
 
   def test_ignore_additional_colors
-    skip
+    #skip
     assert_equal 51, ResistorColorDuo.value(["green", "brown", "orange"])
   end
 end
