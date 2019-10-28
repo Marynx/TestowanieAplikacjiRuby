@@ -1,5 +1,3 @@
-
-Learn more or give us feedback
 require 'rake/testtask'
 require 'rspec/core/rake_task'
 
