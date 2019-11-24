@@ -1,5 +1,6 @@
 require_relative('../lib/anagram')
 RSpec.describe Anagram do
+  describe ".match" do
   it 'Tests no matches' do
     detector = Anagram.new('diaper')
     anagrams = detector.match(%w[hello world zombies pants])
@@ -72,4 +73,5 @@ RSpec.describe Anagram do
     expected = []
     expect(anagrams).to(eq(expected))
   end
+end
 end

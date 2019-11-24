@@ -1,5 +1,6 @@
 require_relative('../lib/etl')
 RSpec.describe ETL do
+  describe ".self.transform" do
   it 'Tests a single letter' do
     old = { 1 => ['A'] }
     expected = { 'a' => 1 }
@@ -51,4 +52,5 @@ RSpec.describe ETL do
                  'z' => 10 }
     expect(ETL.transform(old)).to(eq(expected))
   end
+end
 end

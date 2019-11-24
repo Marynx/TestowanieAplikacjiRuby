@@ -1,5 +1,6 @@
 require_relative '../lib/hamming'
 describe Hamming do
+	describe ".compute" do
 	it "test_empty_strands" do
 		expect(Hamming.compute('', '')).to eq 0
 	end
@@ -24,4 +25,5 @@ describe Hamming do
 	it "test_disallow_second_strand_longer" do
 		expect { Hamming.compute('ATA', 'AGTG') }.to raise_error(ArgumentError)
 	end
+end
 end

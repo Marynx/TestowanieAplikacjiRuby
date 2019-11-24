@@ -1,6 +1,7 @@
 require_relative '../lib/../lib/acronym'
 
 describe Acronym do
+  describe "self.abbreviate" do
   it "test basic" do
     expect('PNG').to eq Acronym.abbreviate('Portable Network Graphics')
   end
@@ -28,5 +29,5 @@ describe Acronym do
   it "test consecutive delimiters" do
     expect('SIMUFTA').to eq Acronym.abbreviate('Something - I made up from thin air')
   end
-
+end
 end

@@ -1,6 +1,7 @@
 require_relative '../lib/sum_of_multiples'
 describe SumOfMultiples do
 
+	describe ".to" do
 	it "test_no_multiples_within_limit" do
 		som = SumOfMultiples.new(3, 5)
 		expect(som.to(1)).to eq 0
@@ -75,7 +76,7 @@ describe SumOfMultiples do
 		som = SumOfMultiples.new(2, 3, 5, 7, 11)
 		expect(som.to(10_000)).to eq 39_614_537
 	end
-
+end
 
 	
 end

@@ -1,5 +1,6 @@
 require_relative '../lib/grains'
 describe Grains do
+	describe ".square" do
 	it "test_1" do
 		expect(Grains.square(1)).to eq 1
 	end
@@ -38,7 +39,11 @@ describe Grains do
 		expect { Grains.square(65) }.to raise_error(ArgumentError)
 	end
 	
+end
+
+describe ".total" do
 	it "test_returns_the_total_number_of_grains_on_the_board" do
 		expect(Grains.total).to eq 18_446_744_073_709_551_615
 	end
+end
 end

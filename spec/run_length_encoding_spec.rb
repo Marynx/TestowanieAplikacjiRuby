@@ -1,5 +1,6 @@
 require_relative '../lib/run_length_encoding'
 describe RunLengthEncoding do
+	describe ".encode" do
 	it "test_encode_empty_string" do
 	    input = ''
 		output = ''
@@ -31,6 +32,8 @@ describe RunLengthEncoding do
 		output = '2a3b4c'
 		expect(RunLengthEncoding.encode(input)).to eq output
 	end
+end
+describe ".decode" do
 	it "test_decode_empty_string" do
 	    input = ''
 		output = ''
@@ -66,4 +69,5 @@ describe RunLengthEncoding do
 		encoded = RunLengthEncoding.encode(input)
 		expect(RunLengthEncoding.decode(encoded)).to eq input
 	end
+end
 end

@@ -1,5 +1,6 @@
 require_relative '../lib/resistor_color_duo'
 describe ResistorColorDuo do
+	describe ".value" do
 	it "test_brown_and_black" do
 		expect(ResistorColorDuo.value(["brown", "black"])).to eq 10
 	end
@@ -15,4 +16,5 @@ describe ResistorColorDuo do
 	it "test_ignore_additional_colors" do
 		expect(ResistorColorDuo.value(["green", "brown", "orange"])).to eq 51
   end
+end
 end

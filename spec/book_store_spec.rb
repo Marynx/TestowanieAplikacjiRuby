@@ -1,6 +1,7 @@
 require_relative '../lib/book_store'
 
 describe BookStore do
+  describe ".self.calculate_price" do
   it "Tests only a single book" do
     basket = [1]
     expect(BookStore.calculate_price(basket)).to eq 8.0
@@ -75,4 +76,5 @@ describe BookStore do
     basket = [1, 1, 2, 2, 3, 3, 4, 5, 1, 1, 2, 2, 3, 3, 4, 5]
     expect(BookStore.calculate_price(basket)).to eq 102.40
   end
+end
 end
